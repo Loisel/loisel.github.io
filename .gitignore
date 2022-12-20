@@ -1,2 +1,3 @@
 mysite/.hugo_build.lock
 *~
+mysite/public/*

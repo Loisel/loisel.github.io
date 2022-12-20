@@ -1,25 +1,22 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: Alois Dirnaichner
-theme: "hugo-profile"
+title: DR. ALOIS DIRNAICHNER
+theme: "hugo-alageek-theme"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+menus:
+  primary:
+    -
+      weight: 3
+      name: RESUME
+    -
+      weight: 4
+      name: MY WORK
+    -
+      weight: 5
+      name: HIRE
+
 params:
-  test: Some
-  hero:
-    enable: true
-    title: "Dr. Alois Dirnaichner"
-    subtitle: Data Analyst, Web Developer
-    image: "/me.jpg"
-    socialLinks:
-      fontAwesomeIcons:
-        -
-          url: https://github.com/Loisel
-          icon: "fab fa-github"
-        -
-          url: https://gitlab.com/loisl
-          icon: "fab fa-gitlab"
-        -
-          url: https://www.linkedin.com/in/alois-dirnaichner-102a60256/
-          icon: "fab fa-linkedin"
-        -
-          url: https://www.xing.com/profile/Alois_Dirnaichner2
-          icon: "fab fa-xing"
+  logofile: "/me2.jpg"
