@@ -1,0 +1,19 @@
+<li class="pl-3 project-item">
+  {{ $image := .Resources.GetMatch .Params.Image }}
+  {{ if $image }}
+  {{ with $image := $image.Resize "150x" }}
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+  {{ end }}
+  {{ end }}
+
+  <div class="project-info">
+    <a href="{{ .Permalink }}"><span>{{ .Title }}</span></a>
+    <br>{{ .Description }}
+    {{ if .Params.Giturl }}
+    <br><a href="{{ .Params.Giturl }}">{{ .Params.Giturl }}</a>
+    {{ end }}
+    <br><span class="badge badge-link text-monospace text-muted">{{ .Params.Languages }}</span>
+    <span class="text-muted">&#8226;</span>
+    <span class="badge badge-link text-monospace text-muted">{{ .Params.Technologies }}</span>
+  </div>
+</li>

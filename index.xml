@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DR. ALOIS DIRNAICHNER</title>
+    <link>http://example.org/</link>
+    <description>Recent content on DR. ALOIS DIRNAICHNER</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Dec 2022 22:29:11 +0100</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EDGE-Transport</title>
+      <link>http://example.org/projects/edge-transport/</link>
+      <pubDate>Tue, 20 Dec 2022 22:29:11 +0100</pubDate>
+      
+      <guid>http://example.org/projects/edge-transport/</guid>
+      <description>The EDGE-Transport model is a energy-systems research vehicle to provide scenarios for transportation demands for 21 world regions in the timeframe 2005 - 2100. Starting from a fork of the GCAM transport module I joined Marianna Rottoli in 2019 for a full refactoring.
+Although originally an independent piece of software, it got tied to the energy system model REMIND as it uses the REMIND input data toolchain to start from a coherent set of techno-economic variables.</description>
+    </item>
+    
+    <item>
+      <title>Heureka</title>
+      <link>http://example.org/projects/heureka/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/projects/heureka/</guid>
+      <description>The client supports a contractor for wind parks to set up an optimization tool for the layout of production and storage capacities for different energy carriers. For the optimization the client chose Calliope, a multi-scale energy systems modelling framework.
+Task Create a ready-to-use web interface for the client to encapsulate the rich Calliope functionality. The user should be able to set up a valid model and perform the optimization. Results are visualized by a range of plots.</description>
+    </item>
+    
+    <item>
+      <title>Piraterace</title>
+      <link>http://example.org/projects/piraterace/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/projects/piraterace/</guid>
+      <description>A pure HTTP-request based multiplayer game where you conduct ships on a tilemap by choosing the right order of command cards.
+More details coming soon.</description>
+    </item>
+    
+    <item>
+      <title>PREMISE</title>
+      <link>http://example.org/projects/premise/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>http://example.org/projects/premise/</guid>
+      <description>From the [documentation](https://premise.readthedocs.io/en/latest/): premise allows to align the life cycle inventories contained in the ecoinvent 3 cutoff database with the output results of Integrated Assessment Models (IAM), such as REMIND or IMAGE, in order to produce life cycle inventory databases under future policy scenarios for any year between 2005 and 2100.
+The first version of this software has been developed by Brian Cox at PSI who wrote an extensive monolithic function as part of a jupyter notebook.</description>
+    </item>
+    
+  </channel>
+</rss>

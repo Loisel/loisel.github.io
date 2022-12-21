@@ -11,12 +11,19 @@ menus:
     -
       weight: 3
       name: RESUME
+      url: "/cv.pdf"
     -
       weight: 4
       name: MY WORK
+      url: "./projects"
     -
       weight: 5
       name: HIRE
 
 params:
+  email: "alois@dirnaichner.eu"
+  linkedin: "dirnaichner"
   logofile: "/me2.jpg"
+  latestprojectcount: 4
+  latestpostcount: 4
+  projects_navigation: true
