@@ -38,6 +38,16 @@ Task Create a ready-to-use web interface for the client to encapsulate the rich 
     </item>
     
     <item>
+      <title>lab::measurement</title>
+      <link>https://loisel.github.io/projects/lab-measurement/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>https://loisel.github.io/projects/lab-measurement/</guid>
+      <description>Lab::measurement has been developed by Andrea Hüttel and others to facilitate the measurement process in a physics lab. It allows for easy setup and simultaneous control of multiple devices connected to different interfaces (e.g., GPIB, NI-VISA, COM). Results can be plotted on-the-go using gnuplot. Here is a small example script measuring an I-V curve:
+use Lab::Moose; # you get &amp;#39;use warnings; use strict;&amp;#39; for free my $source = instrument( type =&amp;gt; &amp;#39;YokogawaGS200&amp;#39;, connection_type =&amp;gt; &amp;#39;USB&amp;#39;, # Safety limits: max_units =&amp;gt; 10, min_units =&amp;gt; -10, max_units_per_step =&amp;gt; 0.</description>
+    </item>
+    
+    <item>
       <title>Piraterace</title>
       <link>https://loisel.github.io/projects/piraterace/</link>
       <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
