@@ -24,6 +24,8 @@ menus:
 params:
   email: "alois@dirnaichner.eu"
   linkedin: "dirnaichner"
+  github: "loisel"
+  gitlab: "loisl"
   logofile: "/me2.jpg"
   latestprojectcount: 4
   latestpostcount: 4
