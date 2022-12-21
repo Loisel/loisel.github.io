@@ -11,7 +11,7 @@
             <h1>{{ i18n "projects" }}</h1>
 
             <ul class="mb-5 list-unstyled">
-              {{ range (.Paginate (.Pages.GroupByDate "2006" "desc")).PageGroups }}
+              {{ range (.Paginate (.Pages.GroupByParamDate "startdate" "2006" "desc")).PageGroups }}
                 <li class="groupby">{{ .Key }}</li>
                 {{ range sort .Pages "Date" "desc" }}
                   {{ partial "projectlist" . }}
