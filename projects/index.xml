@@ -18,6 +18,16 @@ Although originally an independent piece of software, it got tied to the energy 
     </item>
     
     <item>
+      <title>cruxle.org</title>
+      <link>https://loisel.github.io/projects/cruxle/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>https://loisel.github.io/projects/cruxle/</guid>
+      <description>[cruxle.org](https://cruxle.org) is a database for climbing metadata and climbing topos presented as overlays on real zoomable wall photographs. It is the wikipedia idea applied to topos and climbing information. Everything can be edited by everyone - no paywalls.
+You can search for climbing topos via an intuitive map view or via text search and you can contribute by uploading new topos or adding routes and descriptions to existing ones (all changes to objects are in version control).</description>
+    </item>
+    
+    <item>
       <title>Heureka</title>
       <link>https://loisel.github.io/projects/heureka/</link>
       <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>

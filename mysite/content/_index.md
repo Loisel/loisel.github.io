@@ -16,7 +16,6 @@ the multiplayer game [piraterace.com](https://piraterace.com)(coming soon). And 
     <span class="badge badge-link text-monospace text-muted">Django</span>
     <span class="badge badge-link text-monospace text-muted">Angular</span>
     <span class="badge badge-link text-monospace text-muted">scipy</span>
-    <span class="badge badge-link text-monospace text-muted">TensorFlow</span>
     <span class="badge badge-link text-monospace text-muted">data.table</span>
     <span class="badge badge-link text-monospace text-muted">Docker</span>
 </div>
