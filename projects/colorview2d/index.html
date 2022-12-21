@@ -6,26 +6,26 @@
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
-  <title>lab::measurement - Dr. Alois Dirnaichner</title>
+  <title>colorview2d - Dr. Alois Dirnaichner</title>
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta name="referrer" content="no-referrer" />
   <meta
     name="description"
-    content="Control and measurement software for measurement devices. Supports multiple device interfaces."
+    content="Extendible 2D color plotting tool for 3D data."
   />
 
-  <meta property="og:title" content="lab::measurement" />
-<meta property="og:description" content="Control and measurement software for measurement devices. Supports multiple device interfaces." />
+  <meta property="og:title" content="colorview2d" />
+<meta property="og:description" content="Extendible 2D color plotting tool for 3D data." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://loisel.github.io/projects/lab-measurement/" /><meta property="article:section" content="projects" />
+<meta property="og:url" content="https://loisel.github.io/projects/colorview2d/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2022-12-20T15:11:59+01:00" />
 <meta property="article:modified_time" content="2022-12-20T15:11:59+01:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="lab::measurement"/>
-<meta name="twitter:description" content="Control and measurement software for measurement devices. Supports multiple device interfaces."/>
+<meta name="twitter:title" content="colorview2d"/>
+<meta name="twitter:description" content="Extendible 2D color plotting tool for 3D data."/>
 
 
   <meta name="generator" content="Hugo 0.108.0">
@@ -33,7 +33,7 @@
   
 
 
-  <link rel="canonical" href="https://loisel.github.io/projects/lab-measurement/" />
+  <link rel="canonical" href="https://loisel.github.io/projects/colorview2d/" />
 
   
     <link rel="shortcut icon" href="https://loisel.github.io/img/favicon.ico" />
@@ -147,18 +147,18 @@
           
         >
           <h2 class="mx-0 mx-md-4">
-            lab::measurement
+            colorview2d
           </h2>
 
           <div class="mb-4 mb-md-5 meta">
             <span
               class="date"
-              title="Jan 2013"
+              title="Jan 2015"
               >
-              Jan 2013
+              Jan 2015
             </span>
             
-            <a href="https://github.com/lab-measurement/lab-measurement">https://github.com/lab-measurement/lab-measurement</a>
+            <a href="https://github.com/Loisel/colorview2d">https://github.com/Loisel/colorview2d</a>
             
 
             
@@ -181,48 +181,15 @@
 
           <div class="markdown">
             
-  <p>Lab::measurement has been developed by <a href="https://www.akhuettel.de/">Andrea Hüttel</a> and others to
-facilitate the measurement process in a physics lab. It allows for easy setup and simultaneous
-control of multiple devices
-connected to different interfaces (e.g., GPIB, NI-VISA, COM). Results can be plotted on-the-go
-using gnuplot. Here is a small example script measuring an I-V curve:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-perl" data-lang="perl"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> Lab::Moose; <span style="color:#75715e"># you get &#39;use warnings; use strict;&#39; for free</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $source <span style="color:#f92672">=</span> instrument(
-</span></span><span style="display:flex;"><span>    type            <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;YokogawaGS200&#39;</span>,
-</span></span><span style="display:flex;"><span>    connection_type <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;USB&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Safety limits:</span>
-</span></span><span style="display:flex;"><span>    max_units <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">10</span>, min_units <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>,
-</span></span><span style="display:flex;"><span>    max_units_per_step <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.1</span>, max_units_per_second <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $dmm <span style="color:#f92672">=</span> instrument(type <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Agilent34410A&#39;</span>, connection_type <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;USB&#39;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $sweep <span style="color:#f92672">=</span> sweep(
-</span></span><span style="display:flex;"><span>    type       <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;Step::Voltage&#39;</span>,
-</span></span><span style="display:flex;"><span>    instrument <span style="color:#f92672">=&gt;</span> $source,
-</span></span><span style="display:flex;"><span>    from <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>, to <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">5</span>, step <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.01</span>
-</span></span><span style="display:flex;"><span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $datafile <span style="color:#f92672">=</span> sweep_datafile(columns <span style="color:#f92672">=&gt;</span> [<span style="color:#e6db74">qw/voltage current/</span>]);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">my</span> $meas <span style="color:#f92672">=</span> <span style="color:#66d9ef">sub</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">my</span> $sweep <span style="color:#f92672">=</span> shift;
-</span></span><span style="display:flex;"><span>    $sweep<span style="color:#f92672">-&gt;</span>log(
-</span></span><span style="display:flex;"><span>        voltage <span style="color:#f92672">=&gt;</span> $source<span style="color:#f92672">-&gt;</span>cached_level(),
-</span></span><span style="display:flex;"><span>        current <span style="color:#f92672">=&gt;</span> $dmm<span style="color:#f92672">-&gt;</span>get_value(),
-</span></span><span style="display:flex;"><span>    );
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$sweep<span style="color:#f92672">-&gt;</span>start(
-</span></span><span style="display:flex;"><span>    measurement <span style="color:#f92672">=&gt;</span> $meas,
-</span></span><span style="display:flex;"><span>    datafile    <span style="color:#f92672">=&gt;</span> $datafile,
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><p>I joined the team during my PhD thesis in Regensburg around 2012. My main contributions were device
-specific drivers and a generalization of the sweep functionality, if I remember correctly &ndash;
-I have a hard
-time recovering my contributions in the Github repository, maybe there was some hickup.
-A more detailed description of the software can be found in <a href="https://www.sciencedirect.com/science/article/pii/S0010465518302819?via%3Dihub">Huettel et al.</a>.</p>
+  <img class="img-fluid rounded float-start me-3" src="screenshot.png">
+<p>I developed <code>colorview2d</code> during my PhD to easily plot and prepare 3D data sets from measurements
+for a first screening. Being able to quickly play with colorscales and ranges, apply filters and
+extract arrays of linecuts is very useful to extract important features early on during a measurment.</p>
+<p>The initial version supplied a <a href="https://www.wxpython.org/">wxPython</a> GUI but it turned out that
+the integration of GUI and logic was a bad idea. I removed the GUI from the package at some point
+with the aim to provide a separate package for the GUI. I never did.</p>
+<p>The version available on <a href="https://sourceforge.net/projects/colorview2d/">sourceforge</a> still provides
+the GUI and even ships a Windows (7!) binary.</p>
 
 
 
@@ -246,7 +213,7 @@ A more detailed description of the software can be found in <a href="https://www
                 <div class="col-12 col-md-6">
                   
                     <div class="mx-0 mx-md-4 mt-4 text-start">
-                      <a href="https://loisel.github.io/projects/piraterace/">
+                      <a href="https://loisel.github.io/projects/cruxle/">
                         <span class="icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
     <path
@@ -255,7 +222,7 @@ A more detailed description of the software can be found in <a href="https://www
   </svg>
 </span>
 
-                        <span class="text">Piraterace</span>
+                        <span class="text">cruxle.org</span>
                       </a>
                     </div>
                   
@@ -263,8 +230,8 @@ A more detailed description of the software can be found in <a href="https://www
                 <div class="col-12 col-md-6">
                   
                     <div class="mx-0 mx-md-4 mt-4 text-end">
-                      <a href="https://loisel.github.io/projects/heureka/">
-                        <span class="text">Heureka</span>
+                      <a href="https://loisel.github.io/projects/edge-transport/">
+                        <span class="text">EDGE-Transport</span>
                         <span class="icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">
     <path

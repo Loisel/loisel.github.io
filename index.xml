@@ -18,6 +18,16 @@ Although originally an independent piece of software, it got tied to the energy 
     </item>
     
     <item>
+      <title>colorview2d</title>
+      <link>https://loisel.github.io/projects/colorview2d/</link>
+      <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
+      
+      <guid>https://loisel.github.io/projects/colorview2d/</guid>
+      <description>I developed colorview2d during my PhD to easily plot and prepare 3D data sets from measurements for a first screening. Being able to quickly play with colorscales and ranges, apply filters and extract arrays of linecuts is very useful to extract important features early on during a measurment.
+The initial version supplied a wxPython GUI but it turned out that the integration of GUI and logic was a bad idea.</description>
+    </item>
+    
+    <item>
       <title>cruxle.org</title>
       <link>https://loisel.github.io/projects/cruxle/</link>
       <pubDate>Tue, 20 Dec 2022 15:11:59 +0100</pubDate>
