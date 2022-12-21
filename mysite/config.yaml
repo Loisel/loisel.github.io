@@ -1,6 +1,6 @@
 baseURL: https://loisel.github.io/
 languageCode: en-us
-title: DR. ALOIS DIRNAICHNER
+title: Dr. Alois Dirnaichner
 theme: "hugo-alageek-theme"
 markup:
   goldmark:
@@ -19,6 +19,7 @@ menus:
     -
       weight: 5
       name: HIRE
+      url: "mailto:alois@dirnaichner.eu"
 
 params:
   email: "alois@dirnaichner.eu"

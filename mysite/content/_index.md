@@ -2,7 +2,8 @@ Hello, I'm **Alois Dirnaichner** or just call me Al for short.
 I do **Web Development** and **Data Science**.
 I grew up with Physics, worked on carbon nanotubes and in energy-systems research.
 Along the way I also did a lot of **modelling** and I [contributed](https://github.com/polca/premise) to the integration of life-cycle analysis with climate mitigation scenarios.
-I was lead developer of the climbing community platform [cruxle.org](https://cruxle.org) and the multiplayer game [piraterace.com](https://piraterace.com)(coming soon). And I enjoy playing the guitar.
+I was lead developer of the climbing community platform [cruxle.org](https://cruxle.org) and
+the multiplayer game [piraterace.com](https://piraterace.com)(coming soon). And I enjoy playing the guitar.
 
 <div class="h4 text-center">
     <span class="badge badge-link text-monospace text-muted">Python</span>
