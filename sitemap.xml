@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://loisel.github.io/</loc>
     <lastmod>2022-12-20T22:29:11+01:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>http://example.org/projects/</loc>
+    <loc>https://loisel.github.io/projects/</loc>
     <lastmod>2022-12-20T22:29:11+01:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>http://example.org/projects/edge-transport/</loc>
+    <loc>https://loisel.github.io/projects/edge-transport/</loc>
     <lastmod>2022-12-20T22:29:11+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/projects/heureka/</loc>
+    <loc>https://loisel.github.io/projects/heureka/</loc>
     <lastmod>2022-12-20T15:11:59+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/projects/piraterace/</loc>
+    <loc>https://loisel.github.io/projects/piraterace/</loc>
     <lastmod>2022-12-20T15:11:59+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/projects/premise/</loc>
+    <loc>https://loisel.github.io/projects/premise/</loc>
     <lastmod>2022-12-20T15:11:59+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/blog/</loc>
+    <loc>https://loisel.github.io/blog/</loc>
     <priority>0</priority>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://loisel.github.io/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://loisel.github.io/tags/</loc>
   </url>
 </urlset>
