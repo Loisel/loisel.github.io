@@ -98,27 +98,39 @@
           {{ end }}
         >
           {{ if .Site.Params.projects_navigation }}
+          {{- $pages := ($.Site.GetPage "section" .Section).Pages.ByParam "startdate" }}
+          {{- $.Scratch.Set "curPosition" 0 }}
+          {{- $.Scratch.Set "index" 0 }}
+          {{- range $pages }}
+          {{- if eq $ . }}
+          {{- $.Scratch.Set "curPosition" ($.Scratch.Get "index") }}
+          {{- end }}
+          {{- $.Scratch.Add "index" 1 }}
+          {{- end }}
+          {{- $next := (index $pages (add ($.Scratch.Get "curPosition") 1)) }}
+          {{- $prev := (index $pages (sub ($.Scratch.Get "curPosition") 1)) }}
+
             <div class="navigation">
               <div class="row">
                 <div class="col-12 col-md-6">
-                  {{ if .PrevInSection }}
+                  {{- with $prev }}
                     <div class="mx-0 mx-md-4 mt-4 text-start">
-                      <a href="{{ .PrevInSection.Permalink }}">
+                      <a href="{{ .Permalink }}">
                         {{ partial "icon_prev" . }}
-                        <span class="text">{{ .PrevInSection.Title }}</span>
+                        <span class="text">{{ .Title }}</span>
                       </a>
                     </div>
-                  {{ end }}
+                  {{- end }}
                 </div>
                 <div class="col-12 col-md-6">
-                  {{ if .NextInSection }}
+                  {{- with $next }}
                     <div class="mx-0 mx-md-4 mt-4 text-end">
-                      <a href="{{ .NextInSection.Permalink }}">
-                        <span class="text">{{ .NextInSection.Title }}</span>
+                      <a href="{{ .Permalink }}">
+                        <span class="text">{{ .Title }}</span>
                         {{ partial "icon_next" . }}
                       </a>
                     </div>
-                  {{ end }}
+                  {{- end }}
                 </div>
               </div>
             </div>

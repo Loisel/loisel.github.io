@@ -50,9 +50,9 @@
               {{ if gt $nbProjects 0 }}
                 <div class="page-heading">{{ i18n "latest_projects" }}</div>
                 <ul class="px-0">
-                  {{ range (first .Site.Params.latestprojectcount (where .Site.RegularPages "Section" "projects")).GroupByParamDate "startdate" "2006" "desc" }}
+                  {{ range (first .Site.Params.latestprojectcount (where (sort .Site.RegularPages ".Params.startdate" "desc") "Section" "projects")).GroupByParamDate "startdate" "2006" "desc" }}
                     <li class="groupby">{{ .Key }}</li>
-                    {{ range sort .Pages "Date" "desc" }}
+                    {{ range sort .Pages ".Params.startdate" "desc" }}
                       {{ partial "projectlist" . }}
                     {{ end }}
                   {{ end }}
